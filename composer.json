@@ -1,0 +1,14 @@
+{
+  "require-dev": {
+    "squizlabs/php_codesniffer": "^2.8.1"
+  },
+  "autoload": {
+    "classmap": [
+      "ColibriERP"
+    ]
+  },
+  "scripts": {
+    "check-style": "phpcs -p ColibriERP/",
+    "fix-style": "phpcbf -p --encoding=utf-8 ColibriERP/"
+  }
+}
