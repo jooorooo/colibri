@@ -1,14 +1,18 @@
 {
-  "require-dev": {
-    "squizlabs/php_codesniffer": "^2.8.1"
-  },
+  "name": "simexis/colibri",
+  "homepage": "https://github.com/jooorooo/colibri",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Georgi Nachev",
+      "email": "jooorooo@gmail.com"
+    }
+  ],
   "autoload": {
     "classmap": [
-      "ColibriERP"
+      "src"
     ]
   },
-  "scripts": {
-    "check-style": "phpcs -p ColibriERP/",
-    "fix-style": "phpcbf -p --encoding=utf-8 ColibriERP/"
-  }
+  "minimum-stability": "dev",
+  "prefer-stable": true
 }
