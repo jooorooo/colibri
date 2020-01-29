@@ -133,6 +133,12 @@ class ColibriERPStructMatInfo extends ColibriERPWsdlClass
      */
     public $IsActive;
     /**
+     * The PriceInfo
+     *
+     * @var array
+     */
+    public $PriceInfo = [];
+    /**
      * Constructor method for matInfo
      *
      * @see parent::__construct()
@@ -157,9 +163,9 @@ class ColibriERPStructMatInfo extends ColibriERPWsdlClass
      *
      * @return ColibriERPStructMatInfo
      */
-    public function __construct($_idMat = null,$_mNum = null,$_mName = null,$_prodName = null,$_mUnit = null,$_mKCode = null,$_mDDSTax = null,$_idGroup = null,$_gNum = null,$_packSchemeName = null,$_matAttribute = null,$_price = null,$_curCode = null,$_matStore = null,$_barCode = null,$_tags = null,$_isActive = null)
+    public function __construct($_idMat = null,$_mNum = null,$_mName = null,$_prodName = null,$_mUnit = null,$_mKCode = null,$_mDDSTax = null,$_idGroup = null,$_gNum = null,$_packSchemeName = null,$_matAttribute = null,$_price = null,$_curCode = null,$_matStore = null,$_barCode = null,$_tags = null,$_isActive = null,$_priceInfo = [])
     {
-        parent::__construct(array('idMat'=>$_idMat,'MNum'=>$_mNum,'MName'=>$_mName,'ProdName'=>$_prodName,'MUnit'=>$_mUnit,'MKCode'=>$_mKCode,'MDDSTax'=>$_mDDSTax,'idGroup'=>$_idGroup,'GNum'=>$_gNum,'PackSchemeName'=>$_packSchemeName,'matAttribute'=>$_matAttribute,'Price'=>$_price,'curCode'=>$_curCode,'matStore'=>$_matStore,'barCode'=>$_barCode,'tags'=>$_tags,'IsActive'=>$_isActive), false);
+        parent::__construct(array('idMat'=>$_idMat,'MNum'=>$_mNum,'MName'=>$_mName,'ProdName'=>$_prodName,'MUnit'=>$_mUnit,'MKCode'=>$_mKCode,'MDDSTax'=>$_mDDSTax,'idGroup'=>$_idGroup,'GNum'=>$_gNum,'PackSchemeName'=>$_packSchemeName,'matAttribute'=>$_matAttribute,'Price'=>$_price,'curCode'=>$_curCode,'matStore'=>$_matStore,'barCode'=>$_barCode,'tags'=>$_tags,'IsActive'=>$_isActive,'PriceInfo'=>$_priceInfo), false);
     }
     /**
      * Get idMat value
@@ -500,6 +506,26 @@ class ColibriERPStructMatInfo extends ColibriERPWsdlClass
     public function setIsActive($_isActive)
     {
         return ($this->IsActive = $_isActive);
+    }
+    /**
+     * Get PriceInfo value
+     *
+     * @return array
+     */
+    public function getPriceInfo()
+    {
+        return $this->PriceInfo;
+    }
+    /**
+     * Set PriceInfo value
+     *
+     * @param integer $_priceInfo the PriceInfo
+     *
+     * @return array
+     */
+    public function setPriceInfo($_priceInfo)
+    {
+        return ($this->PriceInfo = is_array($_priceInfo) ? $_priceInfo : []);
     }
     /**
      * Method called when an object has been exported with var_export() functions
